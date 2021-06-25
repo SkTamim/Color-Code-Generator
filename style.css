@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+#body{
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: tomato;
+    transition: .7s;
+}
+#cercle{
+    width: 560px;
+    height: 476px;
+    background: #fff;
+    clip-path: ellipse(78% 56% at 21% 87%);
+    position: absolute;
+    bottom: 0;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 209px 113px 0 0;
+}
+#cercle input{
+    padding: 6px;
+    border-radius: 9px;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    background: transparent;
+    text-align: center;
+    margin: 8px 0;
+    border: .5px solid grey;
+}
+#cercle h1{
+    text-align: center;
+}
+
+/* For all Buttons */
+button{
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 9px;
+    font-size: 1.5rem;
+    margin: 8px 5px 0 5px;
+    background: tomato;
+    color: #fff;
+}
+button:active{
+    background: rgb(243, 48, 14);
+}
+
+/* For Responsive */
+@media screen and (max-width:565px) {
+    #body{
+    width: 100vw;
+    height: 100vh;
+    }
+    #cercle{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);  
+    background-color: #eee; 
+    width: 100%;
+    height: auto;
+    position: absolute; 
+    }
+    .content{
+    width: 100%;
+    margin: 0;
+    }
+    #buttonGroup{
+    display: flex;
+    flex-direction: column;
+    }
+    button{
+    margin: 8px 5px 5px 5px;
+    }
+    #cercle input{
+    width: 100%;
+    }
+}
